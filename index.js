@@ -1,0 +1,26 @@
+import express from 'express';
+import dotenv from 'dotenv';
+import cors from 'cors';
+import connectDB from './config/db.js';
+import authRoutes from './routes/authRoutes.js';
+import courseRoutes from './Routes/courseRoutes.js'
+
+dotenv.config();
+connectDB();
+
+const app = express();
+const port=3000
+app.use(cors({
+  origin: "http://localhost:5173",
+  credentials: true
+}));
+app.use(express.json());
+app.use('/uploads', express.static('uploads'));
+
+app.use('/api/auth', authRoutes);
+app.use('/api/courses', courseRoutes);
+
+
+app.listen(port, () =>
+  console.log(`http://locahost:${port}`)
+);
