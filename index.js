@@ -11,7 +11,7 @@ connectDB();
 const app = express();
 const port=3000
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: "https://codehatch-backend-6.onrender.com",
   credentials: true
 }));
 app.use(express.json());
