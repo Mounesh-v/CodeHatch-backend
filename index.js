@@ -11,7 +11,7 @@ connectDB();
 const app = express();
 const port=3000
 app.use(cors({
-  origin: "https://codehatch-backend-6.onrender.com",
+  origin: "https://code-hatch-frontend-1hz5b53zy-mounesh-vs-projects.vercel.app",
   credentials: true
 }));
 app.use(express.json());
