@@ -11,7 +11,7 @@ connectDB();
 const app = express();
 const port=3000
 app.use(cors({
-  origin: "https://papaya-cannoli-5187ad.netlify.app",
+  origin: "https://jolly-blancmange-62ed96.netlify.app",
   credentials: true
 }));
 app.use(express.json());
