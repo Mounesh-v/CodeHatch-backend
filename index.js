@@ -11,7 +11,7 @@ connectDB();
 const app = express();
 const port=3000
 app.use(cors({
-  origin: "hhttps://lighthearted-frangipane-2b9661.netlify.app",
+  origin: "https://lighthearted-frangipane-2b9661.netlify.app",
   credentials: true
 }));
 app.use(express.json());
